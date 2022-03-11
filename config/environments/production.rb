@@ -7,6 +7,7 @@ Rails.application.configure do
   config.cache_classes = true
 
   config.active_storage.service = :digitalocean
+  config.active_storage.variant_processor = :mini_magick
 
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers
