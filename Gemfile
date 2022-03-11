@@ -74,4 +74,5 @@ end
 
 gem 'devise', '~> 4.8'
 
+gem 'aws-sdk-s3'
 gem 'pagy', '~> 5.10'
