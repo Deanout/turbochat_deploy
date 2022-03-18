@@ -16,9 +16,9 @@
 #
 default: &default
   adapter: postgresql
+  encoding: unicode
   host: localhost
   port: 5432
-  encoding: unicode
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
@@ -33,7 +33,7 @@ development:
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user running Rails.
-  #username: episode_8_demo
+  #username: turbochat_deploy_video
 
   # The password associated with the postgres role (username).
   #password:
@@ -91,3 +91,4 @@ production:
   database: <%= Rails.application.credentials.DB_NAME.prod_db %>
   username: <%= Rails.application.credentials.DB_USERNAME.prod_db %>
   password: <%= Rails.application.credentials.DB_PASSWORD.prod_db %>
+
