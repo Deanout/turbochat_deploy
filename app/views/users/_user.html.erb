@@ -4,7 +4,7 @@
   <% isActive = '' %>
 <% end %>
 <div class="user">
-  <li class="list-group-item user_list_item <%= isActive %>">
+  <li class="list-group-item user_list_item <% isActive %>">
     <div class="row">
       <div class="col-12 d-flex align-items-center justify-content-between">
         <div class="icon-container">
@@ -18,7 +18,9 @@
       </div>
     </div>
     <%= turbo_frame_tag [dom_id(room), "user_last_message"] do %>
-      <%= render "users/last_message", last_message: last_message, sender: sender %>
+      <%= render "users/last_message", 
+        last_message: last_message, 
+        sender: sender %>
     <% end %>
   </li>
 </div>

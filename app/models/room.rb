@@ -41,14 +41,15 @@ class Room < ApplicationRecord
                         partial: 'rooms/last_message',
                         locals: {
                           room: self,
+                          user: last_message.user,
                           last_message: last_message
-
                         })
     broadcast_update_to('rooms',
                         target: user_target,
                         partial: 'users/last_message',
                         locals: {
                           room: self,
+                          user: last_message.user,
                           last_message: last_message,
                           sender: sender
                         })

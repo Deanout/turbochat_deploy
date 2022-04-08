@@ -14,7 +14,7 @@ class RoomsController < ApplicationController
 
   def show
     @single_room = Room.find(params[:id])
-    current_user.update!(current_room: @single_room.id)
+    current_user.update(current_room: @single_room)
 
     @room = Room.new
     @rooms = search_rooms
